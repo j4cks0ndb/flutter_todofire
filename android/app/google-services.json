@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "783934138101",
+    "firebase_url": "https://todofire-4b851.firebaseio.com",
+    "project_id": "todofire-4b851",
+    "storage_bucket": "todofire-4b851.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:783934138101:android:94be61f650992abcb9c7bc",
+        "android_client_info": {
+          "package_name": "com.coalati.todo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "783934138101-o5e96pq5ocpfm3g06f46uh0a26quj673.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCOB069Ty54p-i79zjykGDGW-IWQMofY10"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "783934138101-o5e96pq5ocpfm3g06f46uh0a26quj673.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "783934138101-k5o9e6udc84lkitssdg0nfvb12jrpobt.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.coalati.todo"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

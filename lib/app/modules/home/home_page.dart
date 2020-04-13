@@ -3,6 +3,7 @@ import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:mobx/mobx.dart';
 import 'package:todofire/app/modules/home/models/todo_model.dart';
+import 'components/item_tile.dart';
 import 'home_controller.dart';
 
 class HomePage extends StatefulWidget {
@@ -45,17 +46,7 @@ class _HomePageState extends ModularState<HomePage, HomeController> {
             itemBuilder: (_,index){
               TodoModel model = list[index];
             
-              return ListTile(
-                title: Text(model.title),
-                onTap: (){_showDialog(model);},
-                leading: IconButton(icon: Icon(Icons.delete_forever),color: Colors.red, onPressed: model.delete,),
-                trailing: Checkbox(
-                  value: model.check,
-                  onChanged: (check){
-                    model.check = check;
-                    model.save();
-                  },),
-             );
+              return ItemTile(model: model, onTap: (){_showDialog(model);},);
           });
         }
       ),
@@ -92,7 +83,7 @@ class _HomePageState extends ModularState<HomePage, HomeController> {
             ),
             FlatButton(
               onPressed: () async {
-                await model.save();
+                await controller.save(model);
                 Modular.to.pop();
               },
               child: Text('Salvar'),
